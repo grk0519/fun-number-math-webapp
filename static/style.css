@@ -1,0 +1,274 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #f9f9f9, #eaf0ff);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    position: relative;
+    background-color: #2b2d42;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.title-box {
+    margin-bottom: 10px;
+} 
+
+.center-title {
+    font-size: 2rem;
+    margin: 0;
+}
+
+nav {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a.version-info:hover::after,
+nav a.version-info:focus::after {
+    content: "Number Magic Version 1.0";
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    background-color: #fff;
+    color: #333;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0; /* Remove top/bottom padding to hug header/footer */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #bfacc7dd;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    min-height: calc(100vh - 250px); /* Adjust for header + footer height */
+}
+
+input[type="number"] {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+footer {
+    background-color: #2b2d42;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+
+.home-button {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background-color: #0078d7;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.home-button:hover {
+    background-color: #005ea6;
+}
+
+.result-header {
+    position: relative;
+    background-color: #2b2d42;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.card-hint {
+    font-style: italic;
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 8px;
+}
+
+.home-button {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background: #0077cc;
+    padding: 8px 14px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background 0.3s;
+}
+
+.home-button:hover {
+    background-color: #005fa3;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 2rem;
+}
+
+
+.tiles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Flip Card Base */
+.flip-card {
+    background-color: transparent;
+    width: 280px;
+    height: 260px;
+    perspective: 1000px;
+}
+
+
+/* Specific heading styling for better spacing */
+.flip-card-back h2,
+.flip-card-front h2 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+/* Common style for front/back */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;   /* Stack children vertically */
+    justify-content: center;  /* Center them vertically */
+    align-items: center;      /* Center them horizontally */
+    padding: 20px;
+    color: white;
+    font-size: 1.1em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    overflow-y: auto;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* Rainbow theme */
+.tile1 .flip-card-front { background-color: #ff6666; }
+.tile1 .flip-card-back  { background-color: #b73c3cda; }
+
+.tile2 .flip-card-front { background-color: #ffcc66; }
+.tile2 .flip-card-back  { background-color: #8f7331; }
+
+.tile3 .flip-card-front { background-color: #ffff66; color: #333; }
+.tile3 .flip-card-back  { background-color: #9b9b2f; color: #333; }
+
+.tile4 .flip-card-front { background-color: #28db63; }
+.tile4 .flip-card-back  { background-color: #0581099d; }
+
+.tile5 .flip-card-front { background-color: #66ccff; }
+.tile5 .flip-card-back  { background-color: #1e7491; }
+
+/* Back side flip */
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+@media screen and (max-width: 650px) {
+    .tiles-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flip-card {
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        font-size: 1em;
+        padding: 16px;
+    }
+}

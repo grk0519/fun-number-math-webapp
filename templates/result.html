@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Magic - Math Insights</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="result-header">
+        <a href="/" class="home-button">🏠 Home</a>
+        <h1 class="header-title">📘 Math Insights for {{ number }}</h1>
+    </header>
+
+    
+    <div class="tiles-container">
+        <div class="flip-card tile1" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Multiplication Table</h2>
+                    <p class="card-hint">(Click to view)</p>
+                </div>
+                <div class="flip-card-back">                    
+                    <ul>
+                        <h2>Multiplication Table</h2>
+                        {% for line in details.multiplication %}
+                            <li>{{ line }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card tile2" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Is Prime?</h2>
+                    <p class="card-hint">(Click to view)</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Is Prime?</h2> 
+                    <p>{{ 'Yes' if details.is_prime else ' No' }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card tile3" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Factors</h2>
+                    <p class="card-hint">(Click to view)</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Factors</h2> 
+                    <p>{{ details.factors | join(', ') }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card tile4" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Square & Cube</h2>
+                    <p class="card-hint">(Click to view)</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Square & Cube</h2>
+                    <p>Square: {{ details.square }}</p>
+                    <p>Cube: {{ details.cube }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card tile5" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Even or Odd?</h2>
+                    <p class="card-hint">(Click to view)</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Even or Odd?</h2> 
+                    <p>{{ details.even_or_odd }}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function flipCard(card) {
+            card.classList.toggle('flipped');
+        }
+    </script>
+</body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Magic - Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1 class="header">🔍 Number Magic: {{ number }}</h1>
+    <div class="tiles-container">
+        <div class="tile tile1">
+            <h2>Multiplication Table</h2>
+            <ul>
+                {% for line in details.multiplication %}
+                    <li>{{ line }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="tile tile2">
+            <h2>Is Prime?</h2>
+            <p>{{ 'Yes' if details.is_prime else 'No' }}</p>
+        </div>
+        <div class="tile tile3">
+            <h2>Factors</h2>
+            <p>{{ details.factors | join(', ') }}</p>
+        </div>
+        <div class="tile tile4">
+            <h2>Square & Cube</h2>
+            <p>Square: {{ details.square }}</p>
+            <p>Cube: {{ details.cube }}</p>
+        </div>
+        <div class="tile tile5">
+            <h2>Even or Odd</h2>
+            <p>{{ details.even_or_odd }}</p>
+        </div>
+    </div>
+</body>
+</html>
+-->

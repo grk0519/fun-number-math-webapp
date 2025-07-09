@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Magic ✨</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <div class="title-box">
+            <h1 class="center-title" title="Number Magic">🔢 Number Magic</h1>
+        </div>
+        <nav>
+            <a href="#about" class="version-info" title="Number Magic Version 1.0">About</a>
+            <a>Contact</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <p>Enter a number to unlock its hidden mathematical mysteries! 🧮</p>
+            <form action="/result" method="post">
+                <input 
+                    type="number" name="number" 
+                    min="-1000" max="1000"
+                    placeholder="Enter a number"
+                    required>
+                <button type="submit">Explore</button>
+                <p class="note">Note: Enter a number between -1000 to 1000</p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Number Magic. All rights reserved.
+    </footer>
+</body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number FUN</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0078d7;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005ea6;
+        }
+    </style>
+</head>
+<body>
+    <h1>✨ Welcome to Number Magic ✨</h1>
+    <div class="container">
+        <p>Enter a number to unlock its hidden mathematical mysteries! 🧮</p>
+        <form action="/result" method="post">
+            <input 
+                type="number" name="number" 
+                min="-1000" max="1000"
+                placeholder="Enter a number"
+                required>
+            <button type="submit">Explore</button>
+            <p>"Note: Enter a number (-1000 to 1000)" </p>
+        </form>
+    </div>
+</body>
+</html>
+-->
