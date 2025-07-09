@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: number-magic-app
+    env: python
+    buildCommand: ""
+    startCommand: "gunicorn app:app"
+    repo: https://github.com/grk0519/fun-number-math-webapp
