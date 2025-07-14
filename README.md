@@ -26,7 +26,7 @@ Hosted on [Render](https://render.com)
 ## 📦 Getting Started  
 ```
 # 1. Clone the Repository  
-git clone https://github.com/your-username/number-magic.git
+git clone https://github.com/grk0519/fun-number-math-webapp
 cd number-magic
 # 2 . Set up Virtual environment
 python -m venv venv
