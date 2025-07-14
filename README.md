@@ -25,17 +25,13 @@ Hosted on [Render](https://render.com)
 
 ## 📦 Getting Started  
 
-### 1. Clone the Repository  
-```bash
+# 1. Clone the Repository  
 git clone https://github.com/your-username/number-magic.git
 cd number-magic
-
 # 2 . Set up Virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-
 # 3. Install Dependencies 
 pip install -r requirements.txt
-
 # 4. Run the app
 python app.py
