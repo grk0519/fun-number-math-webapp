@@ -24,7 +24,7 @@ Hosted on [Render](https://render.com)
 | Data Format  | JSON-driven project tiles     |
 
 ## 📦 Getting Started  
-
+```
 # 1. Clone the Repository  
 git clone https://github.com/your-username/number-magic.git
 cd number-magic
