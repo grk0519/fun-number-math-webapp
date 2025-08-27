@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import math
 
 app = Flask(__name__)
 
@@ -9,7 +10,9 @@ def get_number_details(n):
         'factors': [i for i in range(1, n+1) if n % i == 0],
         'square': n ** 2,
         'cube': n ** 3,
-        'even_or_odd': "Even" if n % 2 == 0 else "Odd"
+        'even_or_odd': "Even" if n % 2 == 0 else "Odd",
+        'square_root': round( math.sqrt(n), 3 ),
+        'cube_root': round( n ** (1/3), 3 )
     }
 
 @app.route('/')

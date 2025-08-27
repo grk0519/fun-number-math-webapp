@@ -250,6 +250,10 @@ footer {
 .tile5 .flip-card-front { background-color: #66ccff; }
 .tile5 .flip-card-back  { background-color: #1e7491; }
 
+.tile6 .flip-card-front { background-color: #cc99ff; /* Soft lavender */    color: #fff;}
+.tile6 .flip-card-back  { background-color: #7e57c2; /* Deep purple */ color: #fff;}
+
+
 /* Back side flip */
 .flip-card-back {
     transform: rotateY(180deg);
